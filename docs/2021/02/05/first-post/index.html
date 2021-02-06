@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>first-post | kernel panic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/solarized-light.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="/cloudbyteelias.github.io/custom.css"/>
+    <link rel="manifest" href="/cloudbyteelias.github.io/manifest.json" />
+    <link rel="apple-touch-icon" href="/cloudbyteelias.github.io/icon512.png">
+    <meta name="theme-color" content="#ffffff"/>
+    
+  <meta name="generator" content="Hexo 5.3.0"></head>
+  <body>
+    <script>
+      if ('serviceWorker' in navigator && false) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/cloudbyteelias.github.io/sw.js', {scope: '/cloudbyteelias.github.io/'})
+            .then(function (registration) {
+              // console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(function (err) {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+      }
+    </script>
+  <div id="page-container">
+    <nav class="navbar nav-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+      <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+              <img src="/cloudbyteelias.github.io/icon192.png" height="50">
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+             data-target="mainNavbar">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+          </a>
+      </div>
+      <div id="mainNavbar" class="navbar-menu">
+          <div class="navbar-start">
+              <a class="navbar-item" href="/cloudbyteelias.github.io/"> kernel panic </a>
+              <a class="navbar-item" href="/cloudbyteelias.github.io/archives"> Archives </a>
+              <a class="navbar-item" href="/cloudbyteelias.github.io/about"> About </a>
+          </div>
+      </div>
+  </div>
+</nav>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
+</script>
+    <div id="content-wrap">
+        <div class="container">
+          <div class="article-container">
+  <h1 class="title is-3 is-4-mobile">first-post</h1>
+  <article>
+      <div class="contents">
+        
+      </div>
+      <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+#include &lt;cmath&gt;
+
+
+
+using namespace std;
+
+int main(int argc, char const *argv[])&#123;
+    
+    size_t max&#123;&#125;;
+
+    cout &lt;&lt; &quot;Numero de primos a serem calculados?&quot; ;
+    cout &lt;&lt; endl;
+    cin &gt;&gt; max;
+
+    if (max &#x3D;&#x3D; 0)&#123;
+        cout &lt;&lt; &quot;Error&quot;;
+        return EXIT_FAILURE;
+    &#125;
+
+    auto* primes &#123;new unsigned [max]&#125;;
+
+    size_t count &#123;1&#125;;
+    primes[0] &#x3D; 2;
+
+    unsigned trial &#123;3&#125;;
+
+    while(count &lt; max)&#123;
+
+        bool isprime&#123;true&#125;;
+
+        const auto limit &#x3D; static_cast&lt;unsigned&gt;(sqrt(trial));
+
+        for(size_t i&#123;&#125;; primes[i] &lt;&#x3D; limit &amp;&amp; isprime; ++i)&#123;
+
+                isprime &#x3D; trial % primes[i] &gt; 0;
+
+        &#125;
+
+        if(isprime)&#123;
+            primes[count ++] &#x3D; trial;
+            trial +&#x3D; 2;
+        &#125;
+
+        &#x2F;&#x2F;output
+
+        for(size_t i &#123;&#125;; i &lt; max; i++)&#123;
+
+            cout &lt;&lt; setw(10) &lt;&lt; primes[i];
+
+            if((i+1) % 10 &#x3D;&#x3D; 0)&#123;
+                cout &lt;&lt; endl;
+            &#125;
+        &#125;
+
+        &#x2F;&#x2F;cout &lt;&lt; endl;
+        delete[] primes; &#x2F;&#x2F; free memory array
+        &#x2F;&#x2F;primes &#x3D; nullptr; &#x2F;&#x2F; reset no ponteiro
+    
+    &#125;
+
+    return EXIT_SUCCESS;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+      <p class="copyright"><strong>Links: <a href="http://cloudbyteelias.github.io/2021/02/05/first-post/">http://cloudbyteelias.github.io/2021/02/05/first-post/</a></strong></p>
+  </article>
+  <div id="comment">
+    
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function() {
+        this.page.url = "http://cloudbyteelias.github.io/2021/02/05/first-post/"; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "ckkszzkbw0001sfphccydhq0k"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+  
+      (function() {
+        var d = document,
+          s = d.createElement("script");
+        s.src = "https://iometa.disqus.com/embed.js";
+        s.setAttribute("data-timestamp", +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    
+</div>
+</div>
+        </div>
+    </div>
+    
+<footer id="footer">
+    <div class="content has-text-centered">
+        <p>
+            © 2021 <a href="http://cloudbyteelias.github.io">kernel panic</a>.
+            
+        </p>
+    </div>
+</footer>
+
+  </div>
+  
+    <script id="dsq-count-scr" src="//iometa.disqus.com/count.js" async></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  </body>
+</html>
