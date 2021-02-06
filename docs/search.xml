@@ -4,52 +4,19 @@
   
     
     <entry>
-      <title>TTT</title>
-      <link href="2021/02/05/TTT/"/>
-      <url>2021/02/05/TTT/</url>
+      <title>welcome Jedi !</title>
+      <link href="2021/02/06/welcome-Jedi!/"/>
+      <url>2021/02/06/welcome-Jedi!/</url>
       
-        <content type="html"><![CDATA[<pre class="line-numbers language-lisp" data-language="lisp"><code class="language-lisp"><span class="token punctuation">(</span><span class="token defun"><span class="token keyword">defmacro</span> <span class="token function">d/after</span> <span class="token punctuation">(</span><span class="token arguments"><span class="token argument variable">feature</span> <span class="token rest-vars"><span class="token lisp-marker">&amp;rest</span> <span class="token argument variable">body</span></span></span><span class="token punctuation">)</span></span>  <span class="token string">"Load <span class="token argument">BODY</span> after <span class="token argument">FEATURE</span>, catching errors and displaying as warnings."</span>  <span class="token punctuation">(</span><span class="token declare keyword">declare</span> <span class="token punctuation">(</span><span class="token car">indent</span> defun<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token punctuation">`(</span><span class="token car">with-eval-after-load</span> <span class="token splice symbol variable">,feature</span>     <span class="token punctuation">(</span><span class="token car">condition-case-unless-debug</span> err         <span class="token punctuation">(</span><span class="token car">progn</span>           <span class="token splice symbol variable">,@body</span><span class="token punctuation">)</span>       <span class="token punctuation">(</span><span class="token keyword">error</span>        <span class="token punctuation">(</span><span class="token car">display-warning</span>         <span class="token quoted-symbol variable symbol">'init</span>         <span class="token punctuation">(</span><span class="token car">format</span> <span class="token string">"%s eval-after-load: %s "</span>                 <span class="token punctuation">(</span><span class="token car">symbol-name</span> <span class="token splice symbol variable">,feature</span><span class="token punctuation">)</span>                 <span class="token punctuation">(</span><span class="token car">error-message-string</span> err<span class="token punctuation">)</span><span class="token punctuation">)</span>         <span class="token lisp-property property">:error</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>0</title>
-      <link href="2021/02/05/0x000/"/>
-      <url>2021/02/05/0x000/</url>
-      
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<blockquote><p>Primeiramente seja bem vindo ! este blog não passa apenas de um passatempo, e  um local onde posso acompanhar minha evolução.<br>maioria dos posts será escrito em PT_BR .<br>os códigos desenvolvidos aqui ficaram salvos em -&gt; <a href="https://github.com/cloudbyteelias/Kernel-Panic-Sources">https://github.com/cloudbyteelias/Kernel-Panic-Sources</a></p></blockquote>]]></content>
       
       
       
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Test</title>
-      <link href="2021/02/05/Test/"/>
-      <url>2021/02/05/Test/</url>
-      
-        <content type="html"><![CDATA[<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"Hello Word"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>first-post</title>
-      <link href="2021/02/05/first-post/"/>
-      <url>2021/02/05/first-post/</url>
-      
-        <content type="html"><![CDATA[<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;teste ss#include &lt;iostream&gt;#include &lt;iomanip&gt;#include &lt;cmath&gt;using namespace std;int main(int argc, char const *argv[])&#123;        size_t max&#123;&#125;;    cout &lt;&lt; &quot;Numero de primos a serem calculados?&quot; ;    cout &lt;&lt; endl;    cin &gt;&gt; max;    if (max &#x3D;&#x3D; 0)&#123;        cout &lt;&lt; &quot;Error&quot;;        return EXIT_FAILURE;    &#125;    auto* primes &#123;new unsigned [max]&#125;;    size_t count &#123;1&#125;;    primes[0] &#x3D; 2;    unsigned trial &#123;3&#125;;    while(count &lt; max)&#123;        bool isprime&#123;true&#125;;        const auto limit &#x3D; static_cast&lt;unsigned&gt;(sqrt(trial));        for(size_t i&#123;&#125;; primes[i] &lt;&#x3D; limit &amp;&amp; isprime; ++i)&#123;                isprime &#x3D; trial % primes[i] &gt; 0;        &#125;        if(isprime)&#123;            primes[count ++] &#x3D; trial;            trial +&#x3D; 2;        &#125;        &#x2F;&#x2F;output        for(size_t i &#123;&#125;; i &lt; max; i++)&#123;            cout &lt;&lt; setw(10) &lt;&lt; primes[i];            if((i+1) % 10 &#x3D;&#x3D; 0)&#123;                cout &lt;&lt; endl;            &#125;        &#125;        &#x2F;&#x2F;cout &lt;&lt; endl;        delete[] primes; &#x2F;&#x2F; free memory array        &#x2F;&#x2F;primes &#x3D; nullptr; &#x2F;&#x2F; reset no ponteiro        &#125;    return EXIT_SUCCESS;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-      
-      
+        <tags>
+            
+            <tag> Post inicial </tag>
+            
+        </tags>
       
     </entry>
     
