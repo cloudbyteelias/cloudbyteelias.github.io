@@ -1,0 +1,12 @@
+<% let date = new Date(); const year = date.getFullYear();%>
+<footer id="footer">
+    <div class="content has-text-centered">
+        <p>
+            © <%= year%> <a href="<%= config.url %>"><%=config.author%></a>.
+            <% if(theme.busuanzi) {%>
+            PV: <span id="busuanzi_value_site_pv"></span>
+            UV: <span id="busuanzi_value_site_uv"></span>
+            <%}%>
+        </p>
+    </div>
+</footer>
