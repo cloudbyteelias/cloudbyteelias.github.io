@@ -65,15 +65,19 @@ a {
 
 #footer {
     height: 4rem;
+    font-family: dos;
+
 }
 
 #footer p {
     color:  #f3f0f0 !important;
 
+
 }
 
 #footer a {
     color:  #f3f0f0 !important;
+
 }
 
 code {
@@ -185,6 +189,7 @@ img {
 .article-container h6{
 
     color: #ffffff;
+
 } 
 
 
@@ -193,6 +198,7 @@ img {
 article a {
     color: #b40a3d;
     text-decoration: none;
+
 }
 
 article a:hover {
@@ -211,6 +217,7 @@ article h6 {
     margin-block-start: 1em;
     margin-block-end: 0.2em;
     color: #b40a3d;
+
 
 }
 
