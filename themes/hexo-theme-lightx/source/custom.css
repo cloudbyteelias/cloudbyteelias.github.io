@@ -3,16 +3,16 @@ body {
     line-height: 1.6;
     margin: 0;
     background-color: #0e0d0d;
-    color: #050505;
+    color: #faf6f6;
 
 }
 
 nav {
     margin-bottom: 16px;
-    background-color: rgb(181, 187, 187);
+    background-color: rgb(11, 12, 12);
+    color:#ffffff;
+
 }
-
-
 
 
 a {
@@ -73,6 +73,7 @@ code {
 .pagination a {
     border: none;
     overflow: hidden;
+    color: #ffffff;
 }
 
 .shadow {
@@ -84,7 +85,7 @@ code {
 }
 
 .paginator div {
-    border: 2px solid rgb(114, 112, 112);
+    border: 2px solid rgb(19, 18, 18);
     cursor: pointer;
     display: inline-block;
     min-width: 100px;
@@ -93,15 +94,18 @@ code {
     padding: 10px;
 }
 
-.box article {
+.box{
+    background-color: rgb(30, 31, 31);
     overflow-wrap: break-word;
     font-size: larger;
     word-break: break-word;
     line-height: 1.6;
     padding: 16px;
     margin-bottom: 16px;
-    background-color: rgb(211, 219, 219);
+    color:#ffffff;
 }
+
+
 
 .toc-level-1{
     list-style-type: none;
@@ -140,8 +144,21 @@ img {
     word-break: break-word;
     line-height: 1.6;
     font-size: larger;
-    background-color: rgb(211, 219, 219);
+    background-color: rgb(30, 31, 31);
 }
+
+.article-container h1,
+.article-container h2,
+.article-container h3,
+.article-container h4,
+.article-container h5,
+.article-container h6{
+
+    color: #ffffff;
+
+
+} 
+
 
 
 
@@ -151,7 +168,7 @@ article a {
 }
 
 article a:hover {
-    color: #53071e;
+    color: #08ad97;
     text-decoration: none;
 }
 
