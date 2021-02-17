@@ -15,6 +15,11 @@ body {
 }
 
 
+.navbar-item :hover{
+    background-color: rgb(11, 12, 12);
+
+}
+
 nav.navbar.nav-shadow{
     background-color: rgb(11, 12, 12);
     color: #ffffff;
@@ -210,6 +215,7 @@ article a {
 
 article a:hover {
     text-decoration: none;
+    color: #ffffff;
 }
 
 article h1,
