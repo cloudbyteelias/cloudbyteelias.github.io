@@ -1,18 +1,60 @@
+@font-face {
+    font-family: dos;
+    src: url(dosvga.ttf);
+  }
+
+
 body {
     font-family: Verdana, Candara, Arial, Helvetica, Microsoft YaHei, sans-serif;
     line-height: 1.6;
     margin: 0;
-    background-color: #0e0d0d;
-    color: #050505;
+    background: rgb(25,25,25);
+    background: linear-gradient(90deg, rgba(25,25,25,1) 0%, rgba(25,25,25,1) 35%, rgba(29,28,28,1) 100%);
+    color: #faf6f6;
 
 }
+
+
+.navbar-item :hover{
+    background-color: rgb(11, 12, 12);
+
+}
+
+nav.navbar.nav-shadow{
+    background-color: rgb(11, 12, 12);
+    color: #ffffff;
+    font-family: dos;
+    font-size: 215%;
+
+}
+
+nav.navbar.nav-shadow a{
+    color: #ffffff;
+    text-decoration: none;
+
+}
+nav.navbar.nav-shadow a :hover{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgb(11, 12, 12);
+
+
+}
+
+nav.navbar.nav-shadow  :hover{
+    background-color: rgb(11, 12, 12);
+    color: #b40a3d;
+
+
+}
+
 
 nav {
     margin-bottom: 16px;
-    background-color: rgb(181, 187, 187);
+    background-color: rgb(11, 12, 12);
+    color:#ffffff;
+
 }
-
-
 
 
 a {
@@ -35,15 +77,19 @@ a {
 
 #footer {
     height: 4rem;
+    font-family: dos;
+
 }
 
 #footer p {
     color:  #f3f0f0 !important;
 
+
 }
 
 #footer a {
     color:  #f3f0f0 !important;
+
 }
 
 code {
@@ -73,6 +119,7 @@ code {
 .pagination a {
     border: none;
     overflow: hidden;
+    color: #ffffff;
 }
 
 .shadow {
@@ -84,7 +131,7 @@ code {
 }
 
 .paginator div {
-    border: 2px solid rgb(114, 112, 112);
+    border: 2px solid rgb(19, 18, 18);
     cursor: pointer;
     display: inline-block;
     min-width: 100px;
@@ -93,15 +140,18 @@ code {
     padding: 10px;
 }
 
-.box article {
+.box{
+    background-color: rgb(30, 31, 31);
     overflow-wrap: break-word;
     font-size: larger;
     word-break: break-word;
     line-height: 1.6;
     padding: 16px;
     margin-bottom: 16px;
-    background-color: rgb(211, 219, 219);
+    color:#ffffff;
 }
+
+
 
 .toc-level-1{
     list-style-type: none;
@@ -140,19 +190,32 @@ img {
     word-break: break-word;
     line-height: 1.6;
     font-size: larger;
-    background-color: rgb(211, 219, 219);
+    background-color: rgb(30, 31, 31);
 }
+
+.article-container h1,
+.article-container h2,
+.article-container h3,
+.article-container h4,
+.article-container h5,
+.article-container h6{
+
+    color: #ffffff;
+
+} 
+
 
 
 
 article a {
     color: #b40a3d;
     text-decoration: none;
+
 }
 
 article a:hover {
-    color: #53071e;
     text-decoration: none;
+    color: #ffffff;
 }
 
 article h1,
@@ -167,6 +230,7 @@ article h6 {
     margin-block-start: 1em;
     margin-block-end: 0.2em;
     color: #b40a3d;
+
 
 }
 
@@ -210,7 +274,20 @@ article h6 {
     article h4 {
         font-size: 1.2em;
     }
+
+
+
 }
+
+@media screen and (max-width: 1023px){
+.navbar-menu {
+    background-color: rgb(11, 12, 12);
+
+    box-shadow: 0 8px 16px rgb(10 10 10 / 10%);
+    padding: .5rem 0;
+}
+}
+
 
 article p {
     margin-top: 0;
