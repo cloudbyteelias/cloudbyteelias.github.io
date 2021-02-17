@@ -28,6 +28,13 @@ nav.navbar.nav-shadow a{
     text-decoration: none;
 
 }
+nav.navbar.nav-shadow a :hover{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgb(11, 12, 12);
+
+
+}
 
 nav.navbar.nav-shadow  :hover{
     background-color: rgb(11, 12, 12);
@@ -261,7 +268,20 @@ article h6 {
     article h4 {
         font-size: 1.2em;
     }
+
+
+
 }
+
+@media screen and (max-width: 1023px){
+.navbar-menu {
+    background-color: rgb(11, 12, 12);
+
+    box-shadow: 0 8px 16px rgb(10 10 10 / 10%);
+    padding: .5rem 0;
+}
+}
+
 
 article p {
     margin-top: 0;
