@@ -2,10 +2,19 @@ body {
     font-family: Verdana, Candara, Arial, Helvetica, Microsoft YaHei, sans-serif;
     line-height: 1.6;
     margin: 0;
-    background-color: #0e0d0d;
+    background: rgb(25,25,25);
+    background: linear-gradient(90deg, rgba(25,25,25,1) 0%, rgba(25,25,25,1) 35%, rgba(29,28,28,1) 100%);
     color: #faf6f6;
 
 }
+
+
+nav.navbar.nav-shadow{
+    background-color: rgb(11, 12, 12);
+
+
+}
+
 
 nav {
     margin-bottom: 16px;
@@ -155,8 +164,6 @@ img {
 .article-container h6{
 
     color: #ffffff;
-
-
 } 
 
 
@@ -168,7 +175,7 @@ article a {
 }
 
 article a:hover {
-    color: #08ad97;
+    color: #ffffff;
     text-decoration: none;
 }
 
