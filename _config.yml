@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: kernel panic | Паника ядра
+title: KERNEL_PANIC
 subtitle: '内核恐慌'
 description: ''
 keywords:
-author: kernel panic
+author: Elias de Jesus de Moraes
 language: en
 timezone: ''
 
