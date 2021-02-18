@@ -59,6 +59,8 @@ prismjs:
   line_number: true
   tab_replace: ''
 
+sitemap:
+    path: sitemap.xml
 
 search:
   path: search.xml
