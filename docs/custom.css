@@ -376,3 +376,13 @@ article .info a {
     list-style-type: square;
 }
 
+.ximage{
+    justify-content: center;
+}
+
+.logoimage, .radio {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
