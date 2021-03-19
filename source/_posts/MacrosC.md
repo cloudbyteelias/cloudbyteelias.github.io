@@ -1,9 +1,11 @@
 ---
 layout: welcome
-title: Trabalhando com macros parte 1 [Linguagem C]
+title: 0x1-Trabalhando com macros parte 1 [Linguagem C]
 date: 2021-02-17 13:07:23
 tags: Linguagem C
 ---
+
+
 
 
 

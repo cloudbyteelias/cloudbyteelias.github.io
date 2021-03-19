@@ -4,7 +4,7 @@
 
 # Site
 title: KERNEL_PANIC
-subtitle: '内核恐慌'
+subtitle: ''
 description: ''
 keywords:
 author: Cloudbyteelias
@@ -43,7 +43,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
