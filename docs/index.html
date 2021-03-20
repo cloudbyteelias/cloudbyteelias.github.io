@@ -30,8 +30,7 @@
       }
     </script>
   <div id="page-container">
-    
-<nav class="navbar nav-shadow" role="navigation" aria-label="main navigation">
+    <nav class="navbar nav-shadow" role="navigation" aria-label="main navigation">
   <div class="container">
       <div class="navbar-brand">
           <a class="navbar-item" href="/">
@@ -46,8 +45,16 @@
       </div>
       <div id="mainNavbar" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item" href="/"> KERNEL_PANIC </a>
-              <a class="navbar-item" href="/archives"> ARQUIVOS</a>
+            <a class="navbar-item" href="/"> KERNEL_PANIC 
+              <i class="fas fa-home"></i>
+            
+            </a>
+              <a class="navbar-item" href="/archives"> ARQUIVOS
+                <i class="fas fa-folder-open"></i>
+              </a>
+              <a class="navbar-item" target="_blank" rel="noopener" href="https://kernelpanic.asyncdev.com.br/rss2">
+                RSS<i class="fas fa-rss-square"></i>
+              </a>
 
               <!--a class="navbar-item" href="/archives"> Archives </a-->
               <!--a class="navbar-item" href="/about"> About </a-->
@@ -75,6 +82,116 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="container">
           <link rel="canonical" href="http://cloudbyteelias.github.io/"/>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+
+            var $input = document.getElementById(search_id);
+			if (!$input) return;
+            var $resultContent = document.getElementById(content_id);
+            if ($("#local-search-input").length > 0) {
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var content_index = [];
+                        if (!data.title || data.title.trim() === '') {
+                            data.title = "Untitled";
+                        }
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty contents
+                        if (data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i == 0) {
+                                        first_occur = index_content;
+                                    }
+                                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                                }
+                            });
+                        } else {
+                            isMatch = false;
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+
+                                if (start < 0) {
+                                    start = 0;
+                                }
+
+                                if (start == 0) {
+                                    end = 100;
+                                }
+
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+
+                                var match_content = content.substring(start, end);
+
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        }
+    });
+}
+
+
+var path = "/search.xml";
+searchFunc(path, 'local-search-input', 'local-search-result');
+
+</script>
+
 <div class="ximage">
   <img src="https://github.com/cloudbyteelias/cloudbyteelias.github.io/blob/main/Art/Logo.png?raw=true" class="logoimage" />
   <audio class="radio" controls autoplay muted preload="metadata" loop="true" >
@@ -82,6 +199,14 @@ document.addEventListener('DOMContentLoaded', () => {
   </audio>
 <br>
 </div>
+
+<div id="site_search">
+  <div class="form-group">
+   <input class="input" type="text" id="local-search-input" name="q" results="0" placeholder="PROCURAR" class="st-search-input st-default-search-input form-control"/>
+  </div> 
+  <br> 
+ <div class="box" id="local-search-result"></div>
+ </div>
 
 <div class="page-card-list">
   
@@ -96,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
                           
                           <a class="tag is-light" href="/archives/2021/02">2021-02-17</a>
                           
-                            <a class="tag is-light disqus-comment-count" data-disqus-identifier="ckmh2y3870000nwie3hnh9ixo" href="/2021/02/17/MacrosC/#comment">0 Comments</a>       
+                            <a class="tag is-light disqus-comment-count" data-disqus-identifier="ckmh6vl2j0000grie56px9iug" href="/2021/02/17/MacrosC/#comment">0 Comments</a>       
                           
                           <div class="page-card-text">
                               No description
@@ -125,8 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <a target="_blank" rel="noopener" href="https://github.com/cloudbyteelias">
             <i class="fab fa-github fa-2x"></i>
         </a>
-
-
 
         <p>
               2021  
