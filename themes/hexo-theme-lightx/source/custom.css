@@ -73,6 +73,7 @@ a {
 
 #content-wrap {
     padding-bottom: 4rem;
+    color: #ffffff !important;
 }
 
 #footer {
@@ -386,3 +387,14 @@ article .info a {
     margin-right: auto;
     width: 50%;
   }
+
+  table{
+      color: #ffffff  !important;
+      background-color: rgb(14, 15, 15) !important;
+  }
+
+  table :hover {
+    color: #ffffff  !important;
+    background-color: rgb(14, 15, 15) !important;
+}
+

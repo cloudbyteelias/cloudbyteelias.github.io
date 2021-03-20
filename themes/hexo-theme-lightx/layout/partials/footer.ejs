@@ -1,6 +1,18 @@
 <% let date = new Date(); const year = date.getFullYear();%>
 <footer id="footer">
     <div class="content has-text-centered">
+        <a href="https://www.facebook.com/elias.moraes.9212">
+            <i class="fab fa-facebook fa-2x"></i>
+        </a>
+        <a href="https://t.me/Elias_Moraes">
+            <i class="fab fa-telegram fa-2x"></i>
+        </a>
+        <a href="https://github.com/cloudbyteelias">
+            <i class="fab fa-github fa-2x"></i>
+        </a>
+
+
+
         <p>
               <%= year%>  
             <a href=" <%= config.url %>"><%=config.author%>  keep it simple stupid</a>
@@ -9,5 +21,9 @@
             UV: <span id="busuanzi_value_site_uv"></span>
             <%}%>
         </p>
+        
+       
+        
+
     </div>
 </footer>
