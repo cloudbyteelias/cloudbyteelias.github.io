@@ -105,8 +105,7 @@ __VA_ARGS__ que é a responsável por adquirir nossa segunda macro como parâmet
 ## Considerações finais:
 
 <article>
-Obrigado por chegar até aqui,
-faça bom proveito do conteúdo. Agora fique com a foto de um gato fofo.
+Obrigado por chegar até aqui !!!
 </article>
 
 
@@ -116,7 +115,6 @@ https://github.com/cloudbyteelias/Kernel-Panic-Sources/tree/main/C/Macros
 
 
 
-![alt text](https://i.pinimg.com/originals/84/48/c8/8448c8666642b94395a81945bf2af015.jpg "Title")
 
 
 
