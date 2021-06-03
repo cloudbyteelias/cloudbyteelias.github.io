@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/everestk13
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://kernelpanic.asyncdev.com.br
+  * I am everestk13 (https://keybase.io/everestk13) on keybase.
+  * I have a public key ASAP_ndoT-uMpNMMqFvWwhNbKtZqqKZULiQi3FSl1wITago
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01208ca562c14dcaa5249df2f3f6de2ab83801846f3b221d50cb954af6694313fe410a",
+      "host": "keybase.io",
+      "kid": "01200ffe77684feb8ca4d30ca85bd6c2135b2ad66aa8a6542e2422dc54a5d702136a0a",
+      "uid": "2cfe5623e6540e24510a4efe475f2419",
+      "username": "everestk13"
+    },
+    "merkle_root": {
+      "ctime": 1622679114,
+      "hash": "522ae3326dac1d737215cf03e40ed23ea85ec69e71e224508cbba44168ce853c4cfd3b4e415a938b5fa9856d44bcc82db26c075636f55ee10a311c6887b1ce21",
+      "hash_meta": "0260b8e883c27947445de7138dbf932675aef9d56f2db51ddb66e8f06cced691",
+      "seqno": 20102156
+    },
+    "service": {
+      "entropy": "kJrYKlOJyk7HoOa/kYAzeurX",
+      "hostname": "kernelpanic.asyncdev.com.br",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.1"
+  },
+  "ctime": 1622679162,
+  "expire_in": 504576000,
+  "prev": "ce8e34143a77daaee2e70cd598c48b3ba0229390620af61918d1d03a8aeec473",
+  "seqno": 31,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgD/53aE/rjKTTDKhb1sITWyrWaqimVC4kItxUpdcCE2oKp3BheWxvYWTESpcCH8Qgzo40FDp32q7i5wzVmMSLO6Aik5BiCvYZGNHQOoruxHPEIOQeCqxYLd/didTNrymZ7BNbmTQc8jNUP3jq/EV70hWoAgHCo3NpZ8RADCtzHIu3ZiBwqkflv/SKnTFLrfLR27I2iUWT+Zy2GsyMWcBhkZSHirteQII6o+mqCiTnZFBjCZfSml/r8TrvD6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIFhpz3r0k+0FL21llBO2WIPOTzrE2FhYMkGRQM7NSL/Go3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/everestk13
+
+==================================================================
